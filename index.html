@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://fb.me/react-15.2.1.js"></script>
+        <script src="https://fb.me/react-dom-15.2.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+        <title>React Components</title>
+    </head>
+    <body>
+        <div id='react-container'></div>
+        <script type="text/babel">
+            class MyComponent extends React.Component{
+                render() {
+                    return <div>
+                        <h1>{this.props.text}</h1>
+                        <p>{this.props.children}</p>
+                        
+                    </div>
+                }
+            }
+            // const MyComponent = () => {
+            //         return <div>
+            //             <h1>{this.props.text}</h1>
+                        
+            //         </div>
+            // }
+            
+            ReactDOM.render(
+                <div>
+                    <MyComponent text="Hello World Again">
+                        this is my message 1
+                    </MyComponent>
+                    <MyComponent text="Hello Vietnam">
+                        this is my message 2
+                    </MyComponent>
+                    <MyComponent text="Hello Me">
+                        this is my message 3
+                    </MyComponent>
+                </div>
+                ,
+                document.getElementById('react-container'))
+
+        </script>
+    </body>
+</html>
